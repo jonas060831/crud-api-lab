@@ -82,6 +82,19 @@ app.delete('/movies/:movieId', async(req, res) => {
     res.status(400).json({message: error.message})
   }
 
+})
+
+app.put('/movies/:movieId', async(req, res) => {
+
+  try {
+
+    const updatedMovie = await Movie.findByIdAndUpdate(req.params.movieId, req.body, { new: true })
+
+    res.json(updatedMovie)
+
+  } catch (error) {
+    res.status(400).json({message: error.message})
+  }
 
 })
 
