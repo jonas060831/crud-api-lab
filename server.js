@@ -64,9 +64,24 @@ app.get('/movies', async(req, res) => {
 
     return res.json(allMovies)
 
-  } catch (e) {
+  } catch (error) {
       res.status(400).json({message: error.message})
   }
+
+})
+
+app.delete('/movies/:movieId', async(req, res) => {
+
+  try {
+
+    const deletedMovie = await Movie.findByIdAndDelete(req.params.movieId)
+
+    return res.json(deletedMovie)
+
+  } catch (error) {
+    res.status(400).json({message: error.message})
+  }
+
 
 })
 
