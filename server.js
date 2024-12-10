@@ -54,6 +54,19 @@ app.post('/movies', async (req, res) => {
     } catch (error) {
         res.status(400).json({message: error.message})
     }
+})
+
+app.get('/movies', async(req, res) => {
+
+  try {
+
+    const allMovies = await Movie.find() //the array of all movies
+
+    return res.json(allMovies)
+
+  } catch (e) {
+      res.status(400).json({message: error.message})
+  }
 
 })
 
