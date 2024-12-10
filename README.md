@@ -6,3 +6,14 @@
     • front end vite application (front end app that uses this API)
 
   ```
+
+## Movie Object
+
+![Movie Object](./movie_object.png)
+
+
+
+
+## Movie Tracker API Chart
+
+![Movie Tracker API Chart](./movie_tracker_api_chart.png)

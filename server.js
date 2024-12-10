@@ -34,13 +34,27 @@ app.get('/test/movies/route', async(req,res) => {
   //just checking if i can query the Movies Schema without error in postman
   try {
 
-    const movies = await Movies.find()
+    const movies = await Movies.find() //if there is any movie in our database
 
     res.status(200).json(movies)
 
-  } catch (e) {
-      res.status(500).json({ message: e.message })
+  } catch (error) {
+      res.status(500).json({ message: error.message })
   }
+})
+
+app.post('/movies', async (req, res) => {
+
+    try {
+
+      const createdMovie = await Movie.create(req.body)
+
+      return res.json(createdMovie)
+
+    } catch (error) {
+        res.status(400).json({message: error.message})
+    }
+
 })
 
 
