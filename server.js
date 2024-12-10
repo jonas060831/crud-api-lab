@@ -6,6 +6,8 @@ const mongoose = require('mongoose');
 const cors = require('cors')
 const PORT = process.env.PORT || 3000
 
+const Movie = require("./models/movie.js")
+
 //Don't forget to set up CORS!
 app.use(cors())
 
@@ -28,9 +30,18 @@ Delete
 
 // Routes go here
 
+app.get('/test/movies/route', async(req,res) => {
+  //just checking if i can query the Movies Schema without error in postman
+  try {
 
+    const movies = await Movies.find()
 
+    res.status(200).json(movies)
 
+  } catch (e) {
+      res.status(500).json({ message: e.message })
+  }
+})
 
 
 app.listen(PORT, () => {

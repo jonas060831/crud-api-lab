@@ -1,4 +1,4 @@
-# CRUD-API-LAB
+# CRUD-API-LAB (SERVER)
 
 > this project contains 2 parts which is deployed in two separate repository
   ```
