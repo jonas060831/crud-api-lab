@@ -1,11 +1,11 @@
 # CRUD-API-LAB (SERVER)
 
-> this project contains 2 parts which is deployed in two separate repository
-  ```
-    • server (this repository)
-    • front end vite application (front end app that uses this API)
+> #### this project contains 2 parts which is deployed in two separate repository
 
-  ```
+<!-- https://github.com/mattcone/markdown-guide/blob/master/_basic-syntax/line-breaks.md# -->
+
+>> • server (this repository)
+>> • front end vite application [frontend github repository](https://github.com/jonas060831/crud-api-lab-front-end)
 
 ## Movie Object
 
